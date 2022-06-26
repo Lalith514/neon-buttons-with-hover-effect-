@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Neon Buttons
+    </title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+          }
+          h1 {
+            position: relative;
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Megrim', cursive;
+            text-shadow: 
+                  0 0 5px #0bf4f3,
+                  0 0 10px #0bf4f3,
+                  0 0 20px #0bf4f3,
+                  0 0 40px #0bf4f3,
+                  0 0 80px #0bf4f3;
+          }
+          
+          p {
+            font-family: 'Pompiere', cursive;
+            font-weight: 300;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+          }
+          .frame {
+            width: 90%;
+            margin: 40px auto;
+            text-align: center;
+          }
+          button {
+            margin: 20px;
+          }
+          .custom-btn {
+            color: #fff;
+            width: 130px;
+            height: 40px;
+            padding: 10px 25px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+          }
+          
+          /* 1 */
+          .btn-1 {
+            border: none;
+            background-color: #ff9aff;
+            box-shadow: 0 0 5px #ef97e8;
+          }
+          .btn-1:hover {
+             box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+          }
+          
+          /* 2 */
+          .btn-2 {
+            color: #0bf4f3;
+            border: 1px solid #0bf4f3;
+            box-shadow:  0 0 5px #0bf4f3,  0 0 5px #0bf4f3 inset;
+          }
+          .btn-2:before {
+            height: 0%;
+            width: 2px;
+          }
+          .btn-2:hover {
+            color: #fff;
+            box-shadow: inset 0 0 10px #0bf4f3, 0 0 20px #0bf4f3 inset, 0 0 20px #0bf4f3 inset;
+          }
+          
+          
+          /* 3 */
+          .btn-3 {
+            background: #00aced;
+             box-shadow:  0 0 5px #00aced,  0 0 8px #00aced;
+            line-height: 42px;
+            padding: 0;
+            border: none;
+            z-index: 2;
+            -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear;
+          }
+          .btn-3:hover{
+            background-color: transparent;
+            color: #00aced;
+            box-shadow: 0 5px 3px -3px #00aced, 0 -5px 3px -3px #00aced,
+              0 5px 3px -3px #00aced, 0 -5px 3px -3px #00aced;
+          }
+          .btn-3:before,
+          .btn-3:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            width: 100%;
+            height: 50%;
+            right: 0;
+            z-index: -1;
+            background: #00aced;
+            box-shadow: 0 0 5px #00aced;
+            transition: all 0.3s ease;
+          }
+          .btn-3:before {
+            top: 0;
+          }
+          .btn-3:after {
+            bottom: 0;
+          }
+          .btn-3:hover:before,
+          .btn-3:hover:after {
+            height: 0;
+            background-color: #00aced;
+          }
+          
+          
+          /* 4 */
+          .btn-4 {
+            color: #8ce436;
+            padding: 0;
+            border: 1px solid #8ce436;
+            box-shadow: 0 0 5px #8ce436, 0 0 5px inset;
+          }
+          .btn-4:after {
+            position: absolute;
+            content: "";
+            top: 5px;
+            left: 6px;
+            width: 90%;
+            height: 70%;
+            border: 1px solid #8ce436;
+            box-shadow: 0 0 5px #8ce436 inset;
+            opacity: 0;
+            transition: all 0.3s ease;
+          }
+          .btn-4:hover:after {
+            opacity: 1;
+          }
+          
+          /* 5 */
+          .btn-5 {
+            background: #21ebff;
+            line-height: 42px;
+            padding: 0;
+            border: none;
+          }
+          .btn-5:hover{
+            background: transparent;
+            color: #21ebff;
+          }
+          .btn-5:before,
+          .btn-5:after{
+            content:'';
+            position:absolute;
+            top:0;
+            right:0;
+            height:2px;
+            background: #21ebff;
+            width:0;
+              box-shadow:  0 0 5px #21ebff,  0 0 5px #21ebff inset;
+            transition:400ms ease all;
+          }
+          .btn-5:after{
+            right:inherit;
+            top:inherit;
+            left:0;
+            bottom:0;
+          }
+          .btn-5:hover:before,
+          .btn-5:hover:after{
+            width:100%;
+            transition:800ms ease all;
+          }
+          
+          
+          /* 6 */
+          .btn-6 {
+            background: #8ce436;
+            line-height: 40px;
+            padding: 0;
+            border: none;
+            box-shadow: 0 0 5px #8ce436;
+          }
+          .btn-6 span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+          .btn-6:hover{
+            background: transparent;
+          }
+          .btn-6:before,
+          .btn-6:after {
+            position: absolute;
+            content: "";
+            height: 0%;
+            width: 2px;
+            background: #8ce436;
+           box-shadow: 0 0 5px #8ce436;
+          }
+          .btn-6:before {
+            right: 0;
+            top: 0;
+            transition: all 500ms ease;
+          }
+          .btn-6:after {
+            left: 0;
+            bottom: 0;
+            transition: all 500ms ease;
+          }
+          .btn-6:hover:before {
+            transition: all 500ms ease;
+            height: 100%;
+          }
+          .btn-6:hover:after {
+            transition: all 500ms ease;
+            height: 100%;
+          }
+          .btn-6 span:before,
+          .btn-6 span:after {
+            position: absolute;
+            content: "";
+            background: #8ce436;
+            box-shadow: 0 0 5px #8ce436;
+          }
+          .btn-6 span:before {
+            left: 0;
+            top: 0;
+            width: 0%;
+            height: 2px;
+            transition: all 500ms ease;
+          }
+          .btn-6 span:after {
+            right: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            transition: all 500ms ease;
+          }
+          .btn-6 span:hover:before {
+            width: 100%;
+          }
+          .btn-6 span:hover:after {
+            width: 100%;
+          }
+          
+          /* 7 */
+          .btn-7 {
+            color: #21ebff;
+            line-height: 40px;
+            padding: 0;
+            border: none;
+          }
+          .btn-7 span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+          .btn-7:before,
+          .btn-7:after {
+            position: absolute;
+            content: "";
+            right: 0;
+            bottom: 0;
+            background: #21ebff;
+            box-shadow: 0 0 5px #21ebff;
+            transition: all 0.3s ease;
+          }
+          .btn-7:before{
+             height: 50%;
+             width: 2px;
+          }
+          .btn-7:after {
+            width: 20%;
+            height: 2px;
+          }
+          .btn-7:hover:before {
+            height: 100%;
+          }
+          .btn-7:hover:after {
+            width: 100%;
+          }
+          .btn-7 span:before,
+          .btn-7 span:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background: #21ebff;
+            box-shadow: 0 0 5px #21ebff;
+            transition: all 0.3s ease;
+          }
+          .btn-7 span:before {
+            width: 2px;
+            height: 50%;
+          }
+          .btn-7 span:after {
+            height: 2px;
+            width: 20%;
+          }
+          .btn-7 span:hover:before {
+            height: 100%;
+          }
+          .btn-7 span:hover:after {
+            width: 100%;
+          }
+          
+          /* 8 */
+          .btn-8 {
+            line-height: 40px;
+            padding: 0;
+            background: transparent;
+            border: 1px solid #ff9aff;
+            box-shadow: 0 0 5px #ff9aff, 0 0 5px #ff9aff inset;
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            -webkit-perspective: 300px;
+            perspective: 300px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+          }
+          .btn-8:hover{
+            color: #ff9aff;
+          }
+          .btn-8:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ff9aff;
+            box-shadow: 0 0 5px #ff9aff;
+            z-index: -1;
+            -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+            -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+            transition: all 0.3s ease;
+          }
+          .btn-8:hover:after {
+            -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+          }
+            
+          
+          /* 9 */
+          .btn-9 {
+            color: #fff352;
+            border: 1px solid #fff352;
+            box-shadow: 0 0 5px #fff352, 0 0 5px #fff352 inset;
+            z-index: 2;
+            transition: all 0.3s ease;
+            overflow: hidden;
+          }
+          .btn-9:after {
+            position: absolute;
+            content: " ";
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease;
+          }
+          .btn-9:hover {
+            color: #000;
+          }
+          .btn-9:hover:after {
+            background: #fff352;
+            -webkit-transform: scale(2) rotate(180deg);
+            transform: scale(2) rotate(180deg);
+            box-shadow:  4px 4px 6px 0 rgba(255,255,255, 1),
+                        -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+              inset -4px -4px 6px 0 rgba(255,255,255, 1),
+              inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+          }
+          
+          /* 10 */
+          .btn-10 {
+            border: 1px solid #ff9aff;
+            box-shadow: 0 0 5px #ff9aff, 0 0 5px #ff9aff inset;
+            color: #ff9aff;
+            background: #000;
+            z-index: 2;
+            transition: all 0.3s ease;
+            overflow: hidden;
+          }
+          .btn-10:after {
+            position: absolute;
+            content: " ";
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: #ff9aff;
+            transition: all 0.3s ease;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+          }
+          .btn-10:hover {
+            color: #fff;
+          }
+          .btn-10:hover:after {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+          }
+          
+          /* 11 */
+          .btn-11 {
+            border: 1px solid #21ebff;
+            color: #21ebff;
+            box-shadow: 0 0 5px #21ebff, 0 0 5px #21ebff inset;
+            transition: all 0.3s ease;
+          }
+          .btn-11:hover{
+             text-shadow:
+              0 0 20px #21ebff,
+              0 0 50px rgba(33, 235, 255, .9),
+              0 0 75px rgba(33, 235, 255, .8),
+              0 0 76px rgba(33, 235, 255, .7),
+              0 0 77px rgba(33, 235, 255, .6),
+              0 0 78px rgba(33, 235, 255, .5),
+              0 0 79px rgba(33, 235, 255, .4),
+              0 0 80px rgba(33, 235, 255, .3),
+              0 0 85px rgba(33, 235, 255, .2),
+               0 0 99px rgba(33, 235, 255, .1);
+          }
+          
+          
+          
+          /* 12 */
+          .btn-12{
+            color: #0bf4f3;
+            position: relative;
+            right: 20px;
+            bottom: 20px;
+            border:none;
+            width: 130px;
+            height: 40px;
+            line-height: 40px;
+            -webkit-perspective: 230px;
+            perspective: 230px;
+          }
+          .btn-12 span {
+            display: block;
+            position: absolute;
+            width: 130px;
+            height: 40px;
+            border: 1px solid #0bf4f3;
+            box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+            margin:0;
+            text-align: center;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+          }
+          .btn-12 span:nth-child(1) {
+            box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+            -webkit-transform: rotateX(90deg);
+            -moz-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+            -webkit-transform-origin: 50% 50% -20px;
+            -moz-transform-origin: 50% 50% -20px;
+            transform-origin: 50% 50% -20px;
+          }
+          .btn-12 span:nth-child(2) {
+            -webkit-transform: rotateX(0deg);
+            -moz-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+            -webkit-transform-origin: 50% 50% -20px;
+            -moz-transform-origin: 50% 50% -20px;
+            transform-origin: 50% 50% -20px;
+          }
+          .btn-12:hover span:nth-child(1) {
+            -webkit-transform: rotateX(0deg);
+            -moz-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+          }
+          .btn-12:hover span:nth-child(2) {
+            background: #000;
+            color: #000;
+            box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+            -webkit-transform: rotateX(-90deg);
+            -moz-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+          }
+          
+          
+          /* 13 */
+          .btn-13 {
+            color: #0bf4f3;
+            box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+            border: 1px solid #0bf4f3;
+            z-index: 1;
+          }
+          .btn-13:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+            transition: all 0.3s ease;
+          }
+          .btn-13:hover {
+            
+          }
+          .btn-13:hover:after {
+            top: 0;
+            height: 100%;
+          }
+          .btn-13:active {
+            top: 2px;
+          }
+          
+          
+          /* 14 */
+          .btn-14 {
+            position: relative;
+            color: #00aced;
+            border: none;
+            z-index: 2;
+          }
+          .btn-14:before,
+          .btn-14:after {
+            position: absolute;
+            content: "";
+            width: 20%;
+            height: 20%;
+            border: 1px solid;
+            
+            z-index: -1;
+            transition: all 0.3s ease;
+          }
+          .btn-14:before{
+             top: 0;
+             left: 0;
+             border-bottom-color: transparent;
+             border-right-color: transparent;
+             border-top-color: #00aced;
+             border-left-color: #00aced;
+          }
+          .btn-14:after{
+             bottom: 0;
+             right: 0;
+             border-top-color: transparent;
+             border-left-color: transparent;
+             border-bottom-color: #00aced;
+             border-right-color: #00aced;
+          }
+          .btn-14:hover:before,
+          .btn-14:hover:after {
+            border-color: #00aced;
+            height: 100%;
+            width: 100%;
+            box-shadow: 0 0 5px #00aced, 0 0 5px #00aced inset;
+          }
+          
+          
+          /* 15 */
+          .btn-15 {
+            color: #ff9aff;
+            border: 1px solid#ff9aff;
+            box-shadow: 0 0 5px #ff9aff, 0 0 5px #ff9aff inset;
+            z-index: 1;
+          }
+          .btn-15:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            background: #ff9aff;
+            box-shadow:
+             0 0 20px  #ff9aff;
+            transition: all 0.3s ease;
+          }
+          .btn-15:hover {
+            color: #fff;
+          }
+          .btn-15:hover:after {
+            left: 0;
+            width: 100%;
+          }
+          .btn-15:active {
+            top: 2px;
+          }
+          
+          
+          /* 16 */
+          .btn-16 {
+            border: 1px solid #fff;
+            box-shadow: 0 0 5px #fff, 0 0 5px #fff inset;
+          }
+          .btn-16:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 100%;
+            top: 0;
+            left: 0;
+            direction: rtl;
+            z-index: -1;
+            box-shadow:
+             -7px -7px 20px 0px #fff9,
+             -4px -4px 5px 0px #fff9,
+             7px 7px 20px 0px #0002,
+             4px 4px 5px 0px #0001;
+            transition: all 0.3s ease;
+          }
+          .btn-16:hover {
+           box-shadow: rgba(255,255,255, 1) -1px -1px,  -2px -2px, rgba(255,255,255, 1) -3px -3px, rgba(255,255,255, .9) -4px -4px,
+             rgba(255,255,255,.8) -5px -5px, rgba(255,255,255,.7) -6px -6px, rgba(255,255,255,.6) -7px -7px, rgba(255,255,255,.5) -8px -8px,
+                rgba(255,255,255,.4) -9px -9px, rgba(255,255,255,.3) -10px -10px, rgba(255,255,255,.2) -11px -11px, rgba(255,255,255,.1) -12px -12px;
+          }
+          .btn-16:hover:after {
+            left: auto;
+            right: 0;
+            width: 100%;
+          }
+          .btn-16:active {
+            top: 2px;
+          }
+    </style>
+</head>
+<body>
+    <header>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Pompiere&display=swap" rel="stylesheet">
+     </header>
+     
+     <h1>Neon Button Animation</h1>
+     <p>Hover us and enjoy the satisfying neon animation designs!</p>
+     <div class="frame">
+       <button class="custom-btn btn-1">Read More</button>
+       <button class="custom-btn btn-2">Read More</button>
+       <button class="custom-btn btn-3">Read More</button>
+       <button class="custom-btn btn-4">Read More</button>
+       <button class="custom-btn btn-5"><span>Read More</span></button>
+       <button class="custom-btn btn-6"><span>Read More</span></button>
+       <button class="custom-btn btn-7"><span>Read More</span></button>
+       <button class="custom-btn btn-8">Read More</button>
+       <button class="custom-btn btn-9">Read More</button>
+       <button class="custom-btn btn-10">Read More</button>
+       <button class="custom-btn btn-11">Read More</button>
+       <button class="custom-btn btn-12"><span>Click!</span><span>Read More</span></button>
+       <button class="custom-btn btn-13">Read More</button>
+       <button class="custom-btn btn-14">Read More</button>
+       <button class="custom-btn btn-15">Read More</button>
+       <button class="custom-btn btn-16"><span>Read More</span></button>
+       <p style="font-family: 'Megrim', cursive;">
+         </p>
+     </div>
+     
+</body>
+</html>
